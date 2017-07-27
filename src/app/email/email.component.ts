@@ -5,12 +5,13 @@ import { Router } from "@angular/router";
 import { moveIn, fallIn } from "../router.animations";
 
 
+
+
 @Component({
   selector: 'app-email',
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.css'],
-  animations: [moveIn(), fallIn()],
-  host: {'[@moveIn]': ''}
+  animations: [moveIn(), fallIn()]
 })
 export class EmailComponent implements OnInit {
   state: string = "";

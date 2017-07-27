@@ -1,3 +1,4 @@
+
 import { AuthGuard  } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -16,6 +17,7 @@ import { SignupComponent } from './signup/signup.component';
 import { MembersComponent } from './members/members.component';
 
 import { RouterModule, Routes  } from "@angular/router";
+
 
 const appRoutes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -41,7 +43,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ AuthGuard],
+  providers: [AngularFireAuth ,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
