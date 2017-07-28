@@ -19,7 +19,10 @@ export class EmailComponent implements OnInit {
 
   constructor(public af:AngularFireAuth, private router: Router) { 
     this.af.authState.subscribe(auth => {
-      this.router.navigateByUrl('/members');
+      console.log("auth: ", auth)
+      if(auth){
+        this.router.navigateByUrl('/members');
+      }
     });
   }
 

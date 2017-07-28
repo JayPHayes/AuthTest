@@ -1,11 +1,14 @@
 <div class="form-container" id="toolbar">
-    <header [@fallIn]="state">
+    <header >
       <button (click)="logout()" class="basic-btn">Logout</button>
     </header>
-    <div id="page" [@moveInLeft]="state">
-      <h2>Hey {{ name.auth.displayName }}!</h2>
-
-      <img src="assets/images/filler.png" />
+    <div id="page" >
+      <h2>Hey {{ name }}!</h2>
+      <hr>
+      <div class="text-center">
+        <img class="img-thumbnail rounded-circle" style="height: 200px; width: 200px;"  src="{{this?.photoURL}}" alt="Profile Picture of {{name}}">
+      </div>
+      
     </div>
     
 </div>

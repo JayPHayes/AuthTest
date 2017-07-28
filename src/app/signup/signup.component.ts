@@ -9,8 +9,7 @@ import { moveIn, fallIn } from '../router.animations';
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
-  animations: [moveIn(), fallIn()],
-  host: {'[@moveIn]': ''}
+  animations: [moveIn(), fallIn()]
 })
 export class SignupComponent implements OnInit {
   state: string = '';

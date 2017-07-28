@@ -2,7 +2,13 @@
     <a routerLink="/login" id="goback">Go back</a>
     <h2>Custom Login</h2>
 
-    <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+    <div class="alert alert-danger" role="alert" *ngIf="error">
+      <i class="fa fa-exclamation-circle"></i>
+      <strong>ERROR!</strong> 
+      {{error}}
+    </div>
+
+    <!-- <span class="error" *ngIf="error" >{{ error }}</span> -->
 
     <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
 
